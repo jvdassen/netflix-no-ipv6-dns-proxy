@@ -14,7 +14,7 @@ OPTIONS = {
 
     # Specify one or more servers to proxy to.  Note that Twisted may not be
     # happy if you use an IPv6 address.
-    # 'upstream-dns': [('127.0.0.1', 10053)],
+    'upstream-dns': [('62.2.17.61', 53), ('62.2.24.158', 53)],
 
     # Specify a resolv.conf file from which to read upstream nameservers.  As
     # noted above, if you have any upstream IPv6 servers, Twisted may not be
@@ -32,7 +32,7 @@ OPTIONS = {
     # interface if you want it preserved on reboots.
     #
     # # ip route add unreachable 0100::/64
-    'blackhole': None,  # b'100::1',
+    'blackhole': b'100::1',
 }
 
 from twisted.internet import reactor, defer
